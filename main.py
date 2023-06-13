@@ -12,7 +12,6 @@ while len(gussed_states) <50:
     answer = answer.title()
     data = pd.read_csv("50_states.csv")
     if answer == "Exit":
-        non_gussed_states = []
         non_gussed_states = [x for x in list(data.state) if x not in gussed_states]
         non = pd.DataFrame(non_gussed_states)
         non.to_csv("states_to_learn.csv")
